@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/naver-tech-concert/precache-manifest.c22a5c930d503bd1bf150ba576b3f465.js"
+  "/naver-tech-concert/precache-manifest.f39d11889e841caf23e9a0456cc85cd3.js"
 );
 
 self.addEventListener('message', (event) => {
