@@ -1,70 +1,81 @@
-.root {
-  // background: #749621;
-  // padding: 10px;
-  // top: 0;
-  // bottom: 0;
-}
-
-:global(.reveal) :global(.slides) {
-  $width: 95%;
-  section,
-  section > section {
-    $blockquote-border-width: 12px;
-    $blockquote-padding-width: 16px;
-    blockquote {
-      font-family: 'Gothic A1';
-      font-size: 0.6em;
-      text-align: left;
-      font-weight: 500;
-      // border-left: 8px solid #383d3d;
-      border-left: $blockquote-border-width solid rgba(0, 0, 0, 0.2);
-      box-shadow: none;
-      font-style: normal;
-      padding: 0 0 0 $blockquote-padding-width;
-      p {
-        margin-top: 0;
-        &:last-child {
-          margin-bottom: 0;
+:global(.reveal) {
+  :global(.slides) {
+    $width: 95%;
+    section,
+    section > section {
+      $blockquote-border-width: 12px;
+      $blockquote-padding-width: 16px;
+      blockquote {
+        font-family: 'Gothic A1';
+        font-size: 0.6em;
+        text-align: left;
+        font-weight: 500;
+        // border-left: 8px solid #383d3d;
+        border-left: $blockquote-border-width solid rgba(0, 0, 0, 0.2);
+        box-shadow: none;
+        font-style: normal;
+        padding: 0 0 0 $blockquote-padding-width;
+        p {
+          margin-top: 0;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
-    }
-    &.left {
-      text-align: left;
-      width: $width;
-      margin-left: (100 - $width) / 2;
-      margin-right: (100 - $width) / 2;
-      pre,
-      blockquote {
-        box-sizing: border-box;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
+      &.left {
+        text-align: left;
+        width: $width;
+        margin-left: (100 - $width) / 2;
+        margin-right: (100 - $width) / 2;
+        pre,
+        blockquote {
+          box-sizing: border-box;
+          margin-left: 0;
+          margin-right: 0;
+          width: 100%;
+        }
+        blockquote {
+          // margin-left: -24px;
+        }
       }
-      blockquote {
-        // margin-left: -24px;
+      &.right {
+        text-align: right;
+        pre,
+        blockquote {
+          margin-left: 0;
+          margin-right: 0;
+          width: 100%;
+        }
+        blockquote {
+          margin-left: -24px;
+        }
+      }
+      &.center {
+        text-align: center;
+      }
+      &.top {
+        top: 0 !important;
+      }
+      &.bottom {
+        top: auto !important;
+        bottom: 0 !important;
       }
     }
-    &.right {
-      text-align: right;
-      pre,
-      blockquote {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-      }
-      blockquote {
-        margin-left: -24px;
-      }
+  }
+  &:global(.overview) {
+    [hidden] {
+      display: block !important;
     }
-    &.center {
-      text-align: center;
-    }
-    &.top {
-      top: 0 !important;
-    }
-    &.bottom {
-      top: auto !important;
-      bottom: 0 !important;
-    }
+    // :global(.slides) {
+    //   $width: 95%;
+    //   section,
+    //   section > section {
+    //     &:not(.top):not(.bottom) {
+    //       display: flex !important;
+    //       flex-direction: column;
+    //       justify-content: center;
+    //     }
+    //   }
+    // }
   }
 }
